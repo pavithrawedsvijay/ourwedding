@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Vijay weds Pavithra · Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&family=Pinyon+Script&family=Cormorant+SC:wght@300;400;500&family=Outfit:wght@200;300;400;500&family=Tiro+Telugu:ital@0;1&family=Ramaraja&family=Ramabhadra&family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  // ============================================================
+  //  CONFIGURATION — edit these to personalize the invitation
+  // ============================================================
+  const CONFIG = {
+    // Couple
+    groomName:       "Vijay Reddy",
+    groomNameTe:     "విజయ్ రెడ్డి",
+    groomFull:       "Samula Vijay Reddy",
+    groomFullTe:     "సముల విజయ్ రెడ్డి",
+    groomParents:    "",            // optional, e.g. "Son of Mr. & Mrs. Samula"
+    groomParentsTe:  "",
+
+    brideName:       "Pavithra Reddy",
+    brideNameTe:     "పవిత్ర రెడ్డి",
+    brideFull:       "Erigala Pavithra Reddy",
+    brideFullTe:     "ఎరిగల పవిత్ర రెడ్డి",
+    brideParents:    "",
+    brideParentsTe:  "",
+
+    // Monogram initials
+    monogram: "V & P",
+
+    // Wedding date/time
+    weddingDateISO:  "2026-05-09T10:37:00+05:30",
+    dayShort:        "SAT",
+    dayShortTe:      "శని",
+    dateDay:         "09",
+    monthShort:      "May",
+    monthShortTe:    "మే",
+    year:            "2026",
+    muhurthamTime:   "10:37 AM",
+    muhurthamTimeTe: "ఉదయం 10:37",
+
+    // Schedule
+    schedule: [
+      { timeEn: "10:37 AM",              timeTe: "ఉదయం 10:37",
+        nameEn: "Muhurtham",             nameTe: "ముహూర్తం",
+        descEn: "The sacred wedding ceremony",
+        descTe: "పవిత్ర వివాహ వేడుక",
+        accent: true },
+      { timeEn: "12:00 PM onwards",      timeTe: "మధ్యాహ్నం 12:00 నుండి",
+        nameEn: "Lunch",                 nameTe: "భోజనం",
+        descEn: "Grand wedding feast",
+        descTe: "గొప్ప వివాహ విందు" }
+    ],
+
+    // Venue
+    venueName:   "Swarna Vedika Function Hall",
+    venueNameTe: "స్వర్ణ వేదిక ఫంక్షన్ హాల్",
+    venueAddr:   "A celebration to be remembered — held under one roof, with love, light and laughter.",
+    venueAddrTe: "ప్రేమ, వెలుగు, ఆనందాలతో జరిగే ఒక మరపురాని వేడుక.",
+    mapUrl:      "https://maps.app.goo.gl/b1taX4aR1VtFVTZn9",
+
+    // Optional couple photo (leave empty string to hide section)
+    couplePhoto: "",
+
+    // Optional "Our Story" text (leave empty to hide section)
+    storyEn: "",
+    storyTe: "",
+
+    // Hashtag
+    hashtag: "#VijayWedsPavithra"
+  };
+
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "palette": "maroon",
+    "showCountdown": true,
+    "envelopeIntro": true,
+    "petalsOn": true,
+    "language": "en"
+  }/*EDITMODE-END*/;
+</script>
+
+<style>
+  :root {
+    --cream: #f6ecea;
+    --paper: #fbf4f0;
+    --paper-2: #f5e9e4;
+    --ink: #3b1618;
+    --ink-soft: #6b3236;
+    --sage: #8a2e38;
+    --sage-deep: #5c1a22;
+    --sage-soft: #d8a0a7;
+    --accent: #b98b55;
+    --accent-2: #8a6733;
+    --rule: #d9bdbf;
+
+    --serif:    "Cormorant Garamond", Georgia, serif;
+    --italiana: "Italiana", "Cormorant Garamond", serif;
+    --script:   "Pinyon Script", "Cormorant Garamond", cursive;
+    --sans:     "Outfit", ui-sans-serif, system-ui;
+    --telugu-serif:  "Noto Serif Telugu", "Tiro Telugu", serif;
+    --telugu-display:"Ramaraja", "Noto Serif Telugu", serif;
+  }
+  [data-palette="sage"] {
+    --cream: #f4efe4;
+    --paper: #faf6ec;
+    --paper-2: #ece5d4;
+    --ink: #2a3a2e;
+    --ink-soft: #4b5c4f;
+    --sage: #5d7a5c;
+    --sage-deep: #3e5540;
+    --sage-soft: #9fb19d;
+    --accent: #b98b55;
+    --accent-2: #7d5a1e;
+    --rule: #c7c0ac;
+  }
+  [data-palette="gold"] {
+    --cream: #f4ecd9;
+    --paper: #fdf7e5;
+    --paper-2: #ece0c0;
+    --ink: #3c2e1c;
+    --ink-soft: #6b5534;
+    --sage: #b38a3d;
+    --sage-deep: #7d5a1e;
+    --sage-soft: #d9bf82;
+    --accent: #9a6f26;
+    --accent-2: #6b4815;
+    --rule: #d8c898;
+  }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: #1a1a1a;
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+  [data-lang="te"] body, [data-lang="te"] { font-family: var(--telugu-serif); }
+
+  .stage {
+    min-height: 100vh;
+    display: flex; align-items: flex-start; justify-content: center;
+    background: radial-gradient(1200px 600px at 50% -200px, #2a2a2a, #141414 60%, #0c0c0c);
+  }
+  .phone {
+    width: 100%; max-width: 440px;
+    min-height: 100vh;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 40px 120px rgba(0,0,0,0.5);
+  }
+  @media (min-width: 460px) {
+    .phone { margin: 24px 0; min-height: calc(100vh - 48px); border-radius: 28px; }
+  }
+  .phone::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.55), transparent 60%),
+      radial-gradient(ellipse at 50% 100%, rgba(120,50,50,0.06), transparent 60%);
+    pointer-events: none; z-index: 1;
+  }
+  .phone::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode: multiply; opacity: 0.5; pointer-events: none; z-index: 2;
+  }
+  .content { position: relative; z-index: 3; }
+
+  /* ============ LANGUAGE TOGGLE ============ */
+  .lang-toggle {
+    position: fixed;
+    top: 14px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 90;
+    display: flex;
+    background: rgba(251, 244, 240, 0.95);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 3px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+  }
+  .lang-btn {
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .25s;
+  }
+  .lang-btn.active {
+    background: var(--sage-deep);
+    color: var(--paper);
+  }
+
+  /* ============ ENVELOPE ============ */
+  .envelope-wrap {
+    position: fixed; inset: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(ellipse at center, var(--sage-deep) 0%, #2a0d11 70%, #0c0405 100%);
+    transition: opacity .8s ease .6s, visibility 0s linear 1.4s;
+  }
+  .envelope-wrap.open { opacity: 0; visibility: hidden; pointer-events: none; }
+  .envelope { width: min(86vw, 340px); aspect-ratio: 3/2; position: relative; perspective: 1200px; cursor: pointer; }
+  .env-body {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, #eadfc7 0%, #d8c8a5 100%);
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(160,130,80,0.25);
+    overflow: hidden;
+  }
+  .env-body::before{ content:""; position:absolute; inset:12px; border: 1px solid rgba(120,90,40,0.35); border-radius: 2px; }
+  .env-front-fold {
+    position: absolute; inset: 0; top: 50%;
+    background: linear-gradient(180deg, #e0cfa8 0%, #c9b689 100%);
+    box-shadow: inset 0 2px 6px rgba(120,90,40,0.15);
+  }
+  .env-flap {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, #f0e4c9 0%, #d8c8a5 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top center;
+    transition: transform 1.2s cubic-bezier(.7,-.1,.3,1.1);
+  }
+  .envelope.opening .env-flap { transform: rotateX(180deg); }
+  .env-seal {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px; height: 54px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #7c4a3a, #4a2a22 70%);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #e8c98a; font-family: var(--italiana); font-size: 20px;
+    z-index: 5; transition: opacity .4s;
+  }
+  .envelope.opening .env-seal { opacity: 0; }
+  .env-letter {
+    position: absolute; left: 6%; right: 6%; top: 10%; bottom: 10%;
+    background: var(--paper);
+    border-radius: 2px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 20px;
+    transition: transform 1s cubic-bezier(.3,.1,.2,1) .4s;
+    z-index: 2;
+  }
+  .envelope.opening .env-letter { transform: translateY(-35%); }
+  .env-letter .monogram { font-family: var(--script); font-size: 48px; color: var(--sage-deep); line-height: 1; }
+  .env-letter .sub { font-family: var(--sans); font-size: 9px; letter-spacing: 0.4em; color: var(--ink-soft); text-transform: uppercase; margin-top: 6px; }
+  .env-hint {
+    position: absolute; bottom: -48px; left: 0; right: 0;
+    text-align: center; color: #d9c6a6;
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+
+  /* ============ SECTIONS ============ */
+  section { padding: 52px 24px; position: relative; }
+  .section-label {
+    font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em;
+    text-transform: uppercase; color: var(--sage);
+    text-align: center; margin-bottom: 10px;
+  }
+  [data-lang="te"] .section-label { font-family: var(--telugu-serif); letter-spacing: 0.1em; font-size: 13px; }
+  .section-title {
+    font-family: var(--italiana); font-size: 42px; font-weight: 400;
+    color: var(--sage-deep); text-align: center; margin: 0;
+  }
+  [data-lang="te"] .section-title { font-family: var(--telugu-display); font-size: 40px; }
+  .rule {
+    width: 60px; height: 1px; background: var(--rule);
+    margin: 18px auto; position: relative;
+  }
+  .rule::before, .rule::after {
+    content: ""; position: absolute; top: 50%; transform: translateY(-50%);
+    width: 4px; height: 4px; border-radius: 50%; background: var(--accent);
+  }
+  .rule::before { left: -10px; } .rule::after { right: -10px; }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding-top: 72px; padding-bottom: 44px; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(183,213,182,0.18) 0%, transparent 55%);
+  }
+  [data-palette="maroon"] .hero { background: radial-gradient(ellipse at 50% 0%, rgba(216,160,167,0.25) 0%, transparent 55%); }
+  .hero .om { font-family: var(--italiana); font-size: 24px; color: var(--accent); }
+  .hero .eyebrow {
+    font-family: var(--sans); font-size: 10px; letter-spacing: 0.5em;
+    color: var(--ink-soft); text-transform: uppercase; margin-top: 10px;
+  }
+  [data-lang="te"] .hero .eyebrow { font-family: var(--telugu-serif); letter-spacing: 0.08em; font-size: 12px; text-transform: none; }
+  .verse {
+    font-family: var(--serif); font-style: italic; font-size: 14px;
+    color: var(--ink-soft); line-height: 1.6; max-width: 300px;
+    margin: 22px auto 26px;
+  }
+  [data-lang="te"] .verse { font-family: var(--telugu-serif); font-style: normal; font-size: 15px; }
+
+  .names { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 14px 0 6px; }
+  .name { font-family: var(--script); font-size: 54px; line-height: 0.95; color: var(--sage-deep); font-weight: 400; }
+  [data-lang="te"] .name { font-family: var(--telugu-display); font-size: 36px; line-height: 1.15; }
+  .amp {
+    font-family: var(--italiana); font-size: 26px; color: var(--accent);
+    line-height: 1; position: relative;
+  }
+  .amp::before, .amp::after {
+    content: ""; position: absolute; top: 50%;
+    width: 40px; height: 1px; background: var(--rule);
+  }
+  .amp::before { right: calc(100% + 12px); } .amp::after { left: calc(100% + 12px); }
+
+  .save-date {
+    margin: 30px auto 0;
+    display: flex; align-items: stretch; justify-content: center;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 12px 0; max-width: calc(100% - 32px);
+  }
+  .sd-cell {
+    padding: 0 12px; text-align: center; flex: 1; min-width: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .sd-cell + .sd-cell { border-left: 1px solid var(--rule); }
+  .sd-cell .big { font-family: var(--italiana); font-size: 26px; color: var(--sage-deep); line-height: 1; }
+  [data-lang="te"] .sd-cell .big { font-family: var(--telugu-display); font-size: 22px; }
+  .sd-cell .sml {
+    font-family: var(--sans); font-size: 9px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--ink-soft); margin-top: 6px;
+  }
+  [data-lang="te"] .sd-cell .sml { font-family: var(--telugu-serif); letter-spacing: 0.05em; text-transform: none; font-size: 11px; }
+
+  /* ============ COUNTDOWN ============ */
+  .countdown {
+    background: linear-gradient(180deg, transparent, rgba(183,213,182,0.12));
+    padding: 36px 28px 44px; text-align: center;
+  }
+  [data-palette="maroon"] .countdown { background: linear-gradient(180deg, transparent, rgba(216,160,167,0.15)); }
+  .section-sub {
+    font-family: var(--serif); font-style: italic; font-size: 14px;
+    color: var(--ink-soft); text-align: center; margin-top: 8px;
+  }
+  [data-lang="te"] .section-sub { font-family: var(--telugu-serif); font-style: normal; font-size: 15px; }
+  .cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 18px; }
+  .cd-cell {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 14px 4px 10px;
+  }
+  .cd-cell .num { font-family: var(--italiana); font-size: 28px; color: var(--sage-deep); line-height: 1; }
+  .cd-cell .lbl {
+    font-family: var(--sans); font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-soft); margin-top: 6px;
+  }
+  [data-lang="te"] .cd-cell .lbl { font-family: var(--telugu-serif); letter-spacing: 0.02em; text-transform: none; font-size: 11px; }
+
+  /* ============ MUHURTHAM CARD (traditional, floral canopy) ============ */
+  .muhurtham { padding: 44px 20px 60px; }
+  .muh-daytag {
+    text-align: center;
+    font-family: var(--sans); font-size: 10px; letter-spacing: 0.4em;
+    text-transform: uppercase; color: var(--sage); margin-bottom: 18px;
+  }
+  [data-lang="te"] .muh-daytag { font-family: var(--telugu-serif); letter-spacing: 0.08em; text-transform: none; font-size: 12px; }
+  .muh-daytag .star { color: var(--accent); margin: 0 8px; }
+
+  .muh-card {
+    position: relative;
+    background: linear-gradient(180deg, #fffcf3 0%, #f8efde 100%);
+    border-radius: 6px;
+    box-shadow:
+      0 20px 40px rgba(80,60,20,0.1),
+      0 2px 6px rgba(80,60,20,0.06),
+      inset 0 0 0 1px rgba(160,130,80,0.2);
+    overflow: hidden;
+    padding: 0;
+  }
+  [data-palette="maroon"] .muh-card {
+    background: linear-gradient(180deg, #fffaf5 0%, #f8eee7 100%);
+  }
+
+  /* Top floral canopy — SVG garland hanging */
+  .muh-canopy {
+    width: 100%; display: block;
+    margin-top: 6px;
+  }
+  .muh-inner {
+    padding: 0 22px 28px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -8px;
+  }
+  .muh-sacred {
+    font-family: var(--serif); font-style: italic; font-size: 12px;
+    color: var(--ink-soft); margin: 8px 0 4px;
+    letter-spacing: 0.02em;
+  }
+  [data-lang="te"] .muh-sacred { font-family: var(--telugu-serif); font-style: normal; font-size: 13px; }
+  .muh-title {
+    font-family: var(--script); font-size: 72px;
+    color: var(--sage-deep); line-height: 1; margin: 4px 0 14px;
+  }
+  [data-lang="te"] .muh-title {
+    font-family: var(--telugu-display); font-size: 56px; line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  .muh-date { display: inline-flex; align-items: stretch; margin: 2px 0 10px; }
+  .md-side {
+    font-family: var(--italiana); font-size: 20px; color: var(--sage-deep);
+    padding: 6px 14px; display: flex; flex-direction: column; justify-content: center;
+    text-transform: uppercase; letter-spacing: 0.15em;
+  }
+  [data-lang="te"] .md-side { font-family: var(--telugu-display); text-transform: none; letter-spacing: 0; font-size: 18px; padding: 6px 12px; }
+  .md-side.l { text-align: right; } .md-side.r { text-align: left; }
+  .md-day {
+    font-family: var(--italiana); font-size: 64px; line-height: 1;
+    color: var(--sage-deep); padding: 0 12px;
+    border-left: 1px solid var(--rule); border-right: 1px solid var(--rule);
+  }
+  .muh-year {
+    font-family: var(--sans); font-size: 10px; letter-spacing: 0.45em;
+    color: var(--ink-soft); margin-bottom: 10px;
+  }
+  [data-lang="te"] .muh-year { font-family: var(--telugu-display); letter-spacing: 0.05em; font-size: 14px; }
+  .muh-time {
+    font-family: var(--italiana); font-size: 16px; color: var(--sage-deep);
+    letter-spacing: 0.08em;
+  }
+  [data-lang="te"] .muh-time { font-family: var(--telugu-serif); letter-spacing: 0; font-size: 16px; }
+  .muh-trad {
+    font-family: var(--serif); font-style: italic; font-size: 13px;
+    color: var(--accent); margin-top: 8px;
+  }
+  [data-lang="te"] .muh-trad { font-family: var(--telugu-serif); font-style: normal; }
+
+  /* Mandap illustration */
+  .mandap { margin: 18px auto 0; display: block; width: 100%; max-width: 280px; }
+
+  /* Bottom floral accent */
+  .muh-bottom { width: 100%; display: block; margin-top: 8px; }
+
+  /* ============ SCHEDULE ============ */
+  .schedule { padding-bottom: 44px; }
+  .sch-head { text-align: center; margin-bottom: 28px; }
+  .sch-head .date {
+    font-family: var(--italiana); font-size: 36px; color: var(--sage-deep); margin: 4px 0 4px;
+  }
+  [data-lang="te"] .sch-head .date { font-family: var(--telugu-display); font-size: 32px; }
+  .sch-head .theme {
+    font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft);
+  }
+  [data-lang="te"] .sch-head .theme { font-family: var(--telugu-serif); font-style: normal; }
+  .timeline { position: relative; padding-left: 32px; margin: 0 6px; }
+  .timeline::before {
+    content: ""; position: absolute;
+    left: 10px; top: 10px; bottom: 10px; width: 1px;
+    background: linear-gradient(180deg, transparent, var(--sage-soft) 10%, var(--sage-soft) 90%, transparent);
+  }
+  .event {
+    position: relative;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(160,130,80,0.2);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(80,60,20,0.04);
+  }
+  .event::before {
+    content: ""; position: absolute;
+    left: -27px; top: 22px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--sage);
+    box-shadow: 0 0 0 3px var(--paper);
+  }
+  .event.accent::before { border-color: var(--accent); }
+  .event .time {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  [data-lang="te"] .event .time { font-family: var(--telugu-serif); letter-spacing: 0.02em; text-transform: none; font-size: 12px; }
+  .event .name {
+    font-family: var(--script); font-size: 28px;
+    color: var(--sage-deep); line-height: 1.1; margin-top: 2px;
+  }
+  [data-lang="te"] .event .name { font-family: var(--telugu-display); font-size: 26px; line-height: 1.2; }
+  .event .desc {
+    font-family: var(--serif); font-style: italic; font-size: 12px;
+    color: var(--ink-soft); margin-top: 4px;
+  }
+  [data-lang="te"] .event .desc { font-family: var(--telugu-serif); font-style: normal; font-size: 13px; }
+
+  /* ============ VENUE ============ */
+  .venue { padding-bottom: 52px; }
+  .venue-card {
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(160,130,80,0.2);
+    border-radius: 4px;
+    padding: 24px 22px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(80,60,20,0.06);
+  }
+  .venue-name {
+    font-family: var(--italiana); font-size: 24px;
+    color: var(--sage-deep); letter-spacing: 0.02em;
+  }
+  [data-lang="te"] .venue-name { font-family: var(--telugu-display); font-size: 24px; letter-spacing: 0; }
+  .venue-addr {
+    font-family: var(--serif); font-size: 14px; color: var(--ink-soft);
+    margin-top: 8px; line-height: 1.5; font-style: italic;
+  }
+  [data-lang="te"] .venue-addr { font-family: var(--telugu-serif); font-style: normal; }
+  .map-wrap {
+    margin-top: 18px; position: relative; border-radius: 3px; overflow: hidden;
+    border: 1px solid var(--rule); aspect-ratio: 4/3; background: #e9efe3;
+  }
+  .map-pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -90%); z-index: 3; filter: drop-shadow(0 3px 4px rgba(0,0,0,0.3)); }
+  .map-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 16px; padding: 12px 22px;
+    background: var(--sage-deep); color: var(--paper);
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em;
+    text-transform: uppercase; text-decoration: none; border-radius: 2px;
+  }
+  [data-lang="te"] .map-btn { font-family: var(--telugu-serif); letter-spacing: 0.05em; text-transform: none; font-size: 13px; }
+  .map-btn svg { width: 14px; height: 14px; }
+
+  /* ============ OPTIONAL COUPLE PHOTO / STORY ============ */
+  .photo-card {
+    background: var(--paper);
+    border: 1px solid rgba(160,130,80,0.2);
+    border-radius: 2px;
+    padding: 14px 14px 60px;
+    margin: 24px auto 0;
+    max-width: 280px;
+    box-shadow: 0 10px 24px rgba(80,60,20,0.1);
+    transform: rotate(-1deg);
+    position: relative;
+  }
+  .photo-card img { width: 100%; display: block; border-radius: 2px; }
+  .photo-card .cap {
+    position: absolute; bottom: 18px; left: 0; right: 0;
+    font-family: var(--script); font-size: 22px; color: var(--sage-deep); text-align: center;
+  }
+  [data-lang="te"] .photo-card .cap { font-family: var(--telugu-display); font-size: 20px; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    padding: 44px 28px 56px; text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(183,213,182,0.15));
+  }
+  [data-palette="maroon"] footer { background: linear-gradient(180deg, transparent, rgba(216,160,167,0.18)); }
+  .footer-mono { font-family: var(--script); font-size: 46px; color: var(--sage-deep); line-height: 1; }
+  .footer-line {
+    font-family: var(--serif); font-style: italic; font-size: 14px;
+    color: var(--ink-soft); margin-top: 12px;
+  }
+  [data-lang="te"] .footer-line { font-family: var(--telugu-serif); font-style: normal; }
+  .footer-hash {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--accent); margin-top: 16px;
+  }
+
+  /* ============ TWEAKS PANEL ============ */
+  .tweaks {
+    position: fixed; right: 14px; bottom: 14px; z-index: 999;
+    background: rgba(255,253,247,0.96);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(160,130,80,0.35);
+    border-radius: 6px;
+    padding: 14px 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    font-family: var(--sans);
+    width: 240px;
+    display: none;
+  }
+  .tweaks.on { display: block; }
+  .tweaks h4 {
+    margin: 0 0 10px; font-family: var(--italiana); font-size: 18px;
+    color: var(--sage-deep); letter-spacing: 0.05em;
+  }
+  .tweak-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 8px 0; font-size: 12px; color: var(--ink);
+  }
+  .swatch-row { display: flex; gap: 8px; margin-top: 6px; }
+  .swatch { width: 24px; height: 24px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+  .swatch.active { border-color: var(--ink); }
+  .toggle { position: relative; width: 34px; height: 18px; background: #c7c0ac; border-radius: 10px; cursor: pointer; transition: background .2s; }
+  .toggle::after { content:""; position:absolute; top: 2px; left: 2px; width: 14px; height: 14px; background: #fff; border-radius: 50%; transition: transform .2s; }
+  .toggle.on { background: var(--sage); }
+  .toggle.on::after { transform: translateX(16px); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+  .petals { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+  .petal {
+    position: absolute; width: 10px; height: 10px;
+    background: radial-gradient(circle at 30% 30%, #e9b7a8, #c77a66);
+    border-radius: 80% 20% 80% 20% / 60% 40% 60% 40%;
+    opacity: 0.5; animation: fall linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.55; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Hide EN blocks when Telugu; and vice versa */
+  [data-lang="te"] .lang-en { display: none; }
+  [data-lang="en"] .lang-te { display: none; }
+</style>
+</head>
+<body data-palette="maroon" data-lang="en">
+
+<!-- Language toggle -->
+<div class="lang-toggle" id="langToggle">
+  <div class="lang-btn active" data-lang="en">English</div>
+  <div class="lang-btn" data-lang="te">తెలుగు</div>
+</div>
+
+<!-- ENVELOPE -->
+<div class="envelope-wrap" id="envWrap">
+  <div class="envelope" id="envelope">
+    <div class="env-body"></div>
+    <div class="env-letter">
+      <div class="monogram" id="envMono">V &amp; P</div>
+      <div class="sub lang-en">Wedding Invitation</div>
+      <div class="sub lang-te">వివాహ ఆహ్వానం</div>
+    </div>
+    <div class="env-front-fold"></div>
+    <div class="env-flap"></div>
+    <div class="env-seal" id="envSeal">V&amp;P</div>
+    <div class="env-hint">
+      <span class="lang-en">Tap to Open</span>
+      <span class="lang-te">తెరవడానికి నొక్కండి</span>
+    </div>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <div class="content">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="om">॥ శ్రీ ॥</div>
+        <div class="eyebrow">
+          <span class="lang-en">With the blessings of elders</span>
+          <span class="lang-te">పెద్దల ఆశీస్సులతో</span>
+        </div>
+
+        <div class="verse" style="margin-top:22px">
+          <span class="lang-en">“Two souls, one journey — beginning with a sacred vow.”</span>
+          <span class="lang-te">"రెండు హృదయాలు, ఒకే ప్రయాణం — ఒక పవిత్ర వాగ్దానంతో ప్రారంభం."</span>
+        </div>
+
+        <div class="names">
+          <div class="name lang-en" data-slot="groomName"></div>
+          <div class="name lang-te" data-slot="groomNameTe"></div>
+          <div class="amp">&amp;</div>
+          <div class="name lang-en" data-slot="brideName"></div>
+          <div class="name lang-te" data-slot="brideNameTe"></div>
+        </div>
+
+        <div class="eyebrow" style="margin-top:18px">
+          <span class="lang-en">Request the honour of your presence</span>
+          <span class="lang-te">మీ రాకకై ఎదురుచూస్తున్నాము</span>
+        </div>
+
+        <div class="save-date">
+          <div class="sd-cell">
+            <div class="big" data-slot="dayShort"></div>
+            <div class="sml"><span class="lang-en">Day</span><span class="lang-te">వారం</span></div>
+          </div>
+          <div class="sd-cell">
+            <div class="big" data-slot="dateDay"></div>
+            <div class="sml" data-slot="monthShort"></div>
+          </div>
+          <div class="sd-cell">
+            <div class="big" data-slot="year"></div>
+            <div class="sml"><span class="lang-en">Year</span><span class="lang-te">సంవత్సరం</span></div>
+          </div>
+          <div class="sd-cell">
+            <div class="big" data-slot="muhurthamTimeShort"></div>
+            <div class="sml"><span class="lang-en">Muhurtham</span><span class="lang-te">ముహూర్తం</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section class="countdown" id="countdownSec">
+        <div class="section-label"><span class="lang-en">Counting Down</span><span class="lang-te">తరుణం సమీపిస్తోంది</span></div>
+        <div class="rule"></div>
+        <div class="section-sub">
+          <span class="lang-en">A lifetime of togetherness begins with one sacred step.</span>
+          <span class="lang-te">జీవితాంతం కలిసి నడిచే ప్రయాణం, ఒక పవిత్ర అడుగుతో మొదలవుతుంది.</span>
+        </div>
+        <div class="cd-grid">
+          <div class="cd-cell"><div class="num" id="cdD">—</div><div class="lbl"><span class="lang-en">Days</span><span class="lang-te">రోజులు</span></div></div>
+          <div class="cd-cell"><div class="num" id="cdH">—</div><div class="lbl"><span class="lang-en">Hours</span><span class="lang-te">గంటలు</span></div></div>
+          <div class="cd-cell"><div class="num" id="cdM">—</div><div class="lbl"><span class="lang-en">Mins</span><span class="lang-te">నిముషాలు</span></div></div>
+          <div class="cd-cell"><div class="num" id="cdS">—</div><div class="lbl"><span class="lang-en">Secs</span><span class="lang-te">క్షణాలు</span></div></div>
+        </div>
+      </section>
+
+      <!-- MUHURTHAM CARD -->
+      <section class="muhurtham reveal">
+        <div class="muh-daytag">
+          <span class="star">✦</span>
+          <span class="lang-en">Day · <span data-slot="dateDMY"></span> · The Muhurtham</span>
+          <span class="lang-te">శుభ దినం · <span data-slot="dateDMYTe"></span> · ముహూర్తం</span>
+          <span class="star">✦</span>
+        </div>
+
+        <div class="muh-card">
+          <!-- Floral canopy top -->
+          <svg class="muh-canopy" viewBox="0 0 360 90" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="leafG" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#6b8f5f"/>
+                <stop offset="1" stop-color="#3e5540"/>
+              </linearGradient>
+            </defs>
+            <!-- top bar of vines -->
+            <path d="M0 4 Q180 22 360 4" stroke="#6b8f5f" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <!-- hanging garlands -->
+            <g>
+              <!-- left cluster -->
+              <g transform="translate(30 0)">
+                <path d="M0 4 Q6 30 2 60" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="12" r="4" fill="#c44448"/>
+                <circle cx="-2" cy="22" r="3.5" fill="#e08b44"/>
+                <circle cx="5" cy="32" r="4" fill="#c44448"/>
+                <circle cx="0" cy="44" r="3" fill="#f0b16d"/>
+                <circle cx="3" cy="54" r="3.5" fill="#c44448"/>
+              </g>
+              <g transform="translate(70 0)">
+                <path d="M0 4 Q-3 40 4 70" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="-1" cy="14" r="3.5" fill="#e08b44"/>
+                <circle cx="3" cy="26" r="4" fill="#c44448"/>
+                <circle cx="-2" cy="38" r="3" fill="#f0b16d"/>
+                <circle cx="2" cy="52" r="3.5" fill="#c44448"/>
+                <circle cx="4" cy="64" r="3" fill="#e08b44"/>
+              </g>
+              <g transform="translate(120 0)">
+                <path d="M0 4 Q4 30 -2 60" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="10" r="4" fill="#c44448"/>
+                <circle cx="-2" cy="22" r="3" fill="#f0b16d"/>
+                <circle cx="3" cy="34" r="4" fill="#c44448"/>
+                <circle cx="-1" cy="48" r="3.5" fill="#e08b44"/>
+              </g>
+              <g transform="translate(170 0)">
+                <path d="M0 4 Q2 40 -2 75" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="14" r="4" fill="#e08b44"/>
+                <circle cx="-2" cy="28" r="3" fill="#c44448"/>
+                <circle cx="3" cy="40" r="4" fill="#f0b16d"/>
+                <circle cx="0" cy="54" r="3.5" fill="#c44448"/>
+                <circle cx="2" cy="68" r="3" fill="#e08b44"/>
+              </g>
+              <g transform="translate(220 0)">
+                <path d="M0 4 Q-2 30 3 60" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="12" r="4" fill="#c44448"/>
+                <circle cx="-2" cy="22" r="3.5" fill="#e08b44"/>
+                <circle cx="3" cy="34" r="3" fill="#f0b16d"/>
+                <circle cx="1" cy="48" r="3.5" fill="#c44448"/>
+              </g>
+              <g transform="translate(270 0)">
+                <path d="M0 4 Q4 40 -2 70" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="14" r="3.5" fill="#e08b44"/>
+                <circle cx="-2" cy="26" r="4" fill="#c44448"/>
+                <circle cx="3" cy="38" r="3" fill="#f0b16d"/>
+                <circle cx="0" cy="52" r="3.5" fill="#c44448"/>
+                <circle cx="3" cy="64" r="3" fill="#e08b44"/>
+              </g>
+              <g transform="translate(320 0)">
+                <path d="M0 4 Q-3 28 4 58" stroke="#6b8f5f" stroke-width="1" fill="none"/>
+                <circle cx="2" cy="12" r="4" fill="#c44448"/>
+                <circle cx="-2" cy="24" r="3" fill="#e08b44"/>
+                <circle cx="3" cy="36" r="3.5" fill="#c44448"/>
+                <circle cx="-1" cy="48" r="3" fill="#f0b16d"/>
+              </g>
+            </g>
+            <!-- leaves along top -->
+            <g fill="url(#leafG)" opacity="0.85">
+              <ellipse cx="15"  cy="4" rx="8" ry="3" transform="rotate(-20 15 4)"/>
+              <ellipse cx="55"  cy="4" rx="8" ry="3" transform="rotate(18 55 4)"/>
+              <ellipse cx="95"  cy="4" rx="8" ry="3" transform="rotate(-15 95 4)"/>
+              <ellipse cx="145" cy="4" rx="8" ry="3" transform="rotate(16 145 4)"/>
+              <ellipse cx="195" cy="4" rx="8" ry="3" transform="rotate(-18 195 4)"/>
+              <ellipse cx="245" cy="4" rx="8" ry="3" transform="rotate(15 245 4)"/>
+              <ellipse cx="295" cy="4" rx="8" ry="3" transform="rotate(-16 295 4)"/>
+              <ellipse cx="340" cy="4" rx="8" ry="3" transform="rotate(17 340 4)"/>
+            </g>
+          </svg>
+
+          <div class="muh-inner">
+            <div class="muh-sacred">
+              <span class="lang-en">Sacred vows · eternal bond · blessed beginnings</span>
+              <span class="lang-te">పవిత్ర వాగ్దానాలు · శాశ్వత బంధం · శుభ ఆరంభం</span>
+            </div>
+            <div class="muh-title">
+              <span class="lang-en">Muhurtham</span>
+              <span class="lang-te">ముహూర్తం</span>
+            </div>
+
+            <div class="muh-date">
+              <div class="md-side l" data-slot="dayShort"></div>
+              <div class="md-day" data-slot="dateDay"></div>
+              <div class="md-side r" data-slot="monthShort"></div>
+            </div>
+            <div class="muh-year" data-slot="year"></div>
+            <div class="muh-time" data-slot="muhurthamTimeLine"></div>
+            <div class="muh-trad">
+              <span class="lang-en">— South Indian Tradition —</span>
+              <span class="lang-te">— దక్షిణ భారత సంప్రదాయం —</span>
+            </div>
+
+            <!-- Mandap -->
+            <svg class="mandap" viewBox="0 0 320 200" aria-hidden="true">
+              <defs>
+                <linearGradient id="pillar2" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#d7a856"/><stop offset="1" stop-color="#9a6f26"/>
+                </linearGradient>
+                <linearGradient id="canopy2" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#e6b96a"/><stop offset="1" stop-color="#b98b55"/>
+                </linearGradient>
+              </defs>
+              <!-- mandap base platform -->
+              <ellipse cx="160" cy="180" rx="100" ry="8" fill="#7d5a1e" opacity="0.25"/>
+              <!-- pillars -->
+              <rect x="70" y="80" width="12" height="98" fill="url(#pillar2)" rx="2"/>
+              <rect x="66" y="76" width="20" height="6" fill="#7d5a1e" rx="1"/>
+              <rect x="66" y="174" width="20" height="6" fill="#7d5a1e" rx="1"/>
+              <rect x="238" y="80" width="12" height="98" fill="url(#pillar2)" rx="2"/>
+              <rect x="234" y="76" width="20" height="6" fill="#7d5a1e" rx="1"/>
+              <rect x="234" y="174" width="20" height="6" fill="#7d5a1e" rx="1"/>
+              <!-- dome canopy -->
+              <path d="M60 78 Q160 28 260 78 L252 88 Q160 44 68 88 Z" fill="url(#canopy2)"/>
+              <path d="M80 88 Q95 110 88 124 Q94 112 76 94 Z" fill="#b98b55" opacity="0.9"/>
+              <path d="M240 88 Q225 110 232 124 Q226 112 244 94 Z" fill="#b98b55" opacity="0.9"/>
+              <!-- top ornament -->
+              <circle cx="160" cy="28" r="4" fill="#b98b55"/>
+              <path d="M160 24 L160 10" stroke="#b98b55" stroke-width="1.5"/>
+              <!-- flower garland -->
+              <g fill="#c44448">
+                <circle cx="76" cy="66" r="3.5"/><circle cx="96" cy="60" r="3"/>
+                <circle cx="120" cy="55" r="3.5"/><circle cx="148" cy="51" r="3"/>
+                <circle cx="176" cy="51" r="3.5"/><circle cx="204" cy="55" r="3"/>
+                <circle cx="228" cy="60" r="3.5"/><circle cx="244" cy="66" r="3"/>
+              </g>
+              <g fill="#e08b44">
+                <circle cx="86" cy="62" r="2"/><circle cx="108" cy="55" r="2"/>
+                <circle cx="134" cy="51" r="2"/><circle cx="162" cy="49" r="2"/>
+                <circle cx="190" cy="51" r="2"/><circle cx="216" cy="55" r="2"/>
+                <circle cx="236" cy="62" r="2"/>
+              </g>
+              <!-- couple silhouettes -->
+              <g>
+                <!-- groom -->
+                <path d="M134 178 L134 136 Q134 118 142 118 Q150 118 150 136 L150 178 Z" fill="#c44448" opacity="0.85"/>
+                <circle cx="142" cy="112" r="7" fill="#3b2418"/>
+                <!-- turban -->
+                <path d="M134 108 Q142 100 150 108 L150 114 Q142 111 134 114 Z" fill="#e6b96a"/>
+                <!-- bride -->
+                <path d="M170 178 L166 138 Q166 120 178 120 Q190 120 190 138 L186 178 Z" fill="#e08b44" opacity="0.9"/>
+                <path d="M166 178 L156 178 L166 148 Z" fill="#e08b44" opacity="0.9"/>
+                <path d="M190 178 L200 178 L190 148 Z" fill="#e08b44" opacity="0.9"/>
+                <circle cx="178" cy="114" r="6.5" fill="#3b2418"/>
+                <!-- dupatta -->
+                <path d="M168 118 Q178 110 188 118 L188 130 Q178 124 168 130 Z" fill="#c44448" opacity="0.8"/>
+              </g>
+              <!-- sacred fire -->
+              <ellipse cx="160" cy="172" rx="14" ry="4" fill="#7d5a1e" opacity="0.5"/>
+              <path d="M154 172 Q150 156 160 146 Q170 156 166 172 Z" fill="#c44448"/>
+              <path d="M157 172 Q155 162 160 156 Q165 162 163 172 Z" fill="#e9b7a8"/>
+              <!-- scattered petals -->
+              <g fill="#c77a66" opacity="0.6">
+                <circle cx="40" cy="184" r="2"/><circle cx="58" cy="188" r="1.5"/>
+                <circle cx="108" cy="184" r="2"/><circle cx="210" cy="186" r="1.5"/>
+                <circle cx="265" cy="184" r="2"/><circle cx="282" cy="189" r="1.5"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Bottom floral accent -->
+          <svg class="muh-bottom" viewBox="0 0 360 20" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 10 Q180 -4 360 10" stroke="#6b8f5f" stroke-width="1.5" fill="none" opacity="0.55"/>
+            <g fill="#6b8f5f" opacity="0.75">
+              <ellipse cx="30"  cy="10" rx="6" ry="2" transform="rotate(-10 30 10)"/>
+              <ellipse cx="70"  cy="9"  rx="6" ry="2" transform="rotate(8 70 9)"/>
+              <ellipse cx="120" cy="8"  rx="6" ry="2" transform="rotate(-6 120 8)"/>
+              <ellipse cx="180" cy="7"  rx="6" ry="2" transform="rotate(4 180 7)"/>
+              <ellipse cx="240" cy="8"  rx="6" ry="2" transform="rotate(-4 240 8)"/>
+              <ellipse cx="290" cy="9"  rx="6" ry="2" transform="rotate(8 290 9)"/>
+              <ellipse cx="330" cy="10" rx="6" ry="2" transform="rotate(-10 330 10)"/>
+            </g>
+            <g fill="#c44448">
+              <circle cx="50"  cy="12" r="2"/>
+              <circle cx="150" cy="10" r="2"/>
+              <circle cx="210" cy="9"  r="2"/>
+              <circle cx="310" cy="11" r="2"/>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- SCHEDULE -->
+      <section class="schedule reveal">
+        <div class="section-label">
+          <span class="lang-en">Wedding Day · <span data-slot="dateFull"></span></span>
+          <span class="lang-te">వివాహ దినం · <span data-slot="dateFullTe"></span></span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-en">The Schedule</span>
+          <span class="lang-te">కార్యక్రమం</span>
+        </h2>
+        <div class="rule"></div>
+
+        <div class="sch-head">
+          <div class="theme">
+            <span class="lang-en">Color theme: Maroon &amp; Gold · All colors welcome</span>
+            <span class="lang-te">రంగు థీమ్: మెరూన్ &amp; బంగారం · అన్ని రంగులు స్వాగతం</span>
+          </div>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <!-- OPTIONAL PHOTO -->
+      <section id="photoSection" style="display:none; padding-top:0;">
+        <div class="section-label"><span class="lang-en">The Couple</span><span class="lang-te">జంట</span></div>
+        <div class="rule"></div>
+        <div class="photo-card">
+          <img id="couplePhoto" alt="Couple" />
+          <div class="cap" id="photoCap"></div>
+        </div>
+      </section>
+
+      <!-- OPTIONAL STORY -->
+      <section id="storySection" style="display:none;">
+        <div class="section-label"><span class="lang-en">Our Story</span><span class="lang-te">మా కథ</span></div>
+        <h2 class="section-title"><span class="lang-en">Our Story</span><span class="lang-te">మా కథ</span></h2>
+        <div class="rule"></div>
+        <div class="section-sub" style="margin-top:18px; max-width:320px; margin-left:auto; margin-right:auto;">
+          <span class="lang-en" id="storyEn"></span>
+          <span class="lang-te" id="storyTe"></span>
+        </div>
+      </section>
+
+      <!-- VENUE -->
+      <section class="venue reveal">
+        <div class="section-label"><span class="lang-en">The Venue</span><span class="lang-te">వేదిక</span></div>
+        <h2 class="section-title"><span class="lang-en">Where</span><span class="lang-te">ఎక్కడ</span></h2>
+        <div class="rule"></div>
+
+        <div class="venue-card" style="margin-top:22px">
+          <div class="venue-name lang-en" data-slot="venueName"></div>
+          <div class="venue-name lang-te" data-slot="venueNameTe"></div>
+          <div class="venue-addr">
+            <span class="lang-en" data-slot="venueAddr"></span>
+            <span class="lang-te" data-slot="venueAddrTe"></span>
+          </div>
+
+          <div class="map-wrap">
+            <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute; inset:0;">
+              <defs>
+                <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M20 0H0V20" fill="none" stroke="#d4dbc9" stroke-width="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="320" height="240" fill="#eef2e4"/>
+              <rect width="320" height="240" fill="url(#grid2)"/>
+              <path d="M-10 80 Q80 70 160 100 T330 140" fill="none" stroke="#cfd7b9" stroke-width="14" stroke-linecap="round"/>
+              <path d="M-10 80 Q80 70 160 100 T330 140" fill="none" stroke="#f8f6ee" stroke-width="2"/>
+              <path d="M60 -10 Q70 100 120 140 T180 260" fill="none" stroke="#cfd7b9" stroke-width="10" stroke-linecap="round"/>
+              <path d="M60 -10 Q70 100 120 140 T180 260" fill="none" stroke="#f8f6ee" stroke-width="1.5"/>
+              <path d="M210 -10 Q220 80 240 140 T260 260" fill="none" stroke="#cfd7b9" stroke-width="8" stroke-linecap="round"/>
+              <rect x="30" y="150" width="70" height="60" rx="4" fill="#c9d9b0"/>
+              <circle cx="50" cy="175" r="7" fill="#a7bf8a"/>
+              <circle cx="75" cy="190" r="9" fill="#a7bf8a"/>
+              <rect x="195" y="40" width="40" height="30" rx="2" fill="#e3dcc3"/>
+              <rect x="250" y="50" width="30" height="40" rx="2" fill="#e3dcc3"/>
+              <rect x="160" y="175" width="40" height="30" rx="2" fill="#e3dcc3"/>
+            </svg>
+            <svg class="map-pin" width="36" height="44" viewBox="0 0 36 44">
+              <defs>
+                <radialGradient id="pinG2" cx="50%" cy="40%" r="60%">
+                  <stop offset="0" stop-color="#c44448"/><stop offset="1" stop-color="#5c1a22"/>
+                </radialGradient>
+              </defs>
+              <path d="M18 0C8.1 0 0 8.1 0 18c0 12 18 26 18 26s18-14 18-26C36 8.1 27.9 0 18 0z" fill="url(#pinG2)"/>
+              <circle cx="18" cy="18" r="6" fill="#faf6ec"/>
+            </svg>
+          </div>
+
+          <a class="map-btn" id="mapBtn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <span class="lang-en">View on Map</span>
+            <span class="lang-te">మ్యాప్‌లో చూడండి</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-mono" data-slot="monogram"></div>
+        <div class="footer-line">
+          <span class="lang-en">With love and gratitude,<br/><span data-slot="coupleEn"></span></span>
+          <span class="lang-te">ప్రేమతో, కృతజ్ఞతతో,<br/><span data-slot="coupleTe"></span></span>
+        </div>
+        <div class="footer-hash" data-slot="hashtag"></div>
+      </footer>
+
+    </div>
+  </div>
+</div>
+
+<div class="petals" id="petals"></div>
+
+<!-- TWEAKS -->
+<div class="tweaks" id="tweaks">
+  <h4>Tweaks</h4>
+  <div class="tweak-row"><label>Palette</label></div>
+  <div class="swatch-row" id="swatchRow">
+    <div class="swatch" data-val="sage"   style="background: linear-gradient(135deg, #9fb19d, #3e5540)"></div>
+    <div class="swatch" data-val="gold"   style="background: linear-gradient(135deg, #d9bf82, #7d5a1e)"></div>
+    <div class="swatch active" data-val="maroon" style="background: linear-gradient(135deg, #d8a0a7, #5c1a22)"></div>
+  </div>
+  <div class="tweak-row"><label>Language</label>
+    <div style="display:flex; gap:4px;">
+      <div class="lang-btn" data-tweak-lang="en" style="font-size:10px; padding:3px 8px; border:1px solid var(--rule); border-radius:4px; cursor:pointer;">EN</div>
+      <div class="lang-btn" data-tweak-lang="te" style="font-size:10px; padding:3px 8px; border:1px solid var(--rule); border-radius:4px; cursor:pointer;">తె</div>
+    </div>
+  </div>
+  <div class="tweak-row"><label>Countdown</label><div class="toggle on" id="tgCountdown"></div></div>
+  <div class="tweak-row"><label>Envelope intro</label><div class="toggle on" id="tgEnv"></div></div>
+  <div class="tweak-row"><label>Falling petals</label><div class="toggle on" id="tgPetals"></div></div>
+</div>
+
+<script>
+  // ===== Fill config into DOM =====
+  (function() {
+    const monogramInitials = CONFIG.monogram || "V & P";
+    const slots = {
+      groomName: CONFIG.groomName,
+      groomNameTe: CONFIG.groomNameTe,
+      brideName: CONFIG.brideName,
+      brideNameTe: CONFIG.brideNameTe,
+      dayShort: CONFIG.dayShort,
+      dateDay: CONFIG.dateDay,
+      monthShort: CONFIG.monthShort,
+      year: CONFIG.year,
+      muhurthamTimeShort: CONFIG.muhurthamTime.split(' ')[0],
+      muhurthamTimeLine: CONFIG.muhurthamTime + ' onwards',
+      dateFull: `${CONFIG.dateDay} ${CONFIG.monthShort} ${CONFIG.year}`,
+      dateFullTe: `${CONFIG.dateDay} ${CONFIG.monthShortTe} ${CONFIG.year}`,
+      dateDMY: `${CONFIG.dateDay} ${CONFIG.monthShort} ${CONFIG.year}`,
+      dateDMYTe: `${CONFIG.dateDay} ${CONFIG.monthShortTe} ${CONFIG.year}`,
+      venueName: CONFIG.venueName,
+      venueNameTe: CONFIG.venueNameTe,
+      venueAddr: CONFIG.venueAddr,
+      venueAddrTe: CONFIG.venueAddrTe,
+      monogram: monogramInitials,
+      coupleEn: CONFIG.groomName + ' & ' + CONFIG.brideName,
+      coupleTe: CONFIG.groomNameTe + ' & ' + CONFIG.brideNameTe,
+      hashtag: CONFIG.hashtag + ' · ' + CONFIG.dateDay + '.' + (new Date(CONFIG.weddingDateISO).getMonth() + 1).toString().padStart(2,'0') + '.' + CONFIG.year
+    };
+
+    document.querySelectorAll('[data-slot]').forEach(el => {
+      const k = el.getAttribute('data-slot');
+      if (slots[k] !== undefined) {
+        // Preserve child spans (some slots are inside localized spans)
+        if (el.children.length === 0) el.textContent = slots[k];
+        else {
+          // replace only text nodes? fallback: set textContent
+          el.textContent = slots[k];
+        }
+      }
+    });
+
+    document.getElementById('envMono').textContent = monogramInitials;
+    document.getElementById('envSeal').innerHTML = monogramInitials.replace(' & ', '&amp;');
+    document.getElementById('mapBtn').href = CONFIG.mapUrl;
+
+    // Schedule timeline
+    const tl = document.getElementById('timeline');
+    CONFIG.schedule.forEach(ev => {
+      const div = document.createElement('div');
+      div.className = 'event' + (ev.accent ? ' accent' : '');
+      div.innerHTML = `
+        <div class="time"><span class="lang-en">${ev.timeEn}</span><span class="lang-te">${ev.timeTe}</span></div>
+        <div class="name"><span class="lang-en">${ev.nameEn}</span><span class="lang-te">${ev.nameTe}</span></div>
+        <div class="desc"><span class="lang-en">${ev.descEn}</span><span class="lang-te">${ev.descTe}</span></div>
+      `;
+      tl.appendChild(div);
+    });
+
+    // Optional photo
+    if (CONFIG.couplePhoto) {
+      document.getElementById('photoSection').style.display = '';
+      document.getElementById('couplePhoto').src = CONFIG.couplePhoto;
+      document.getElementById('photoCap').textContent = monogramInitials;
+    }
+    // Optional story
+    if (CONFIG.storyEn || CONFIG.storyTe) {
+      document.getElementById('storySection').style.display = '';
+      document.getElementById('storyEn').textContent = CONFIG.storyEn;
+      document.getElementById('storyTe').textContent = CONFIG.storyTe || CONFIG.storyEn;
+    }
+  })();
+
+  // ===== Language toggle =====
+  (function() {
+    const root = document.documentElement;
+    const body = document.body;
+    function setLang(lang) {
+      body.setAttribute('data-lang', lang);
+      document.querySelectorAll('#langToggle .lang-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
+    }
+    document.querySelectorAll('#langToggle .lang-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        setLang(b.dataset.lang);
+        postEdits({ language: b.dataset.lang });
+      });
+    });
+    document.querySelectorAll('[data-tweak-lang]').forEach(b => {
+      b.addEventListener('click', () => setLang(b.getAttribute('data-tweak-lang')));
+    });
+    // Initial
+    setLang(TWEAK_DEFAULTS.language || 'en');
+
+    function postEdits(edits) {
+      try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch(e){}
+    }
+    window._postEdits = postEdits;
+  })();
+
+  // ===== Envelope intro =====
+  (function() {
+    const wrap = document.getElementById('envWrap');
+    const env  = document.getElementById('envelope');
+    const seen = sessionStorage.getItem('env_seen') === '1';
+    function openIt() {
+      env.classList.add('opening');
+      setTimeout(() => {
+        wrap.classList.add('open');
+        sessionStorage.setItem('env_seen', '1');
+      }, 1200);
+    }
+    if (seen || TWEAK_DEFAULTS.envelopeIntro === false) {
+      wrap.style.display = 'none';
+    } else {
+      env.addEventListener('click', openIt);
+      setTimeout(() => { if (!env.classList.contains('opening')) openIt(); }, 2800);
+    }
+  })();
+
+  // ===== Countdown =====
+  (function() {
+    const target = new Date(CONFIG.weddingDateISO).getTime();
+    const D = document.getElementById('cdD'), H = document.getElementById('cdH');
+    const M = document.getElementById('cdM'), S = document.getElementById('cdS');
+    const pad = n => String(n).padStart(2,'0');
+    function tick() {
+      const diff = target - Date.now();
+      if (diff <= 0) { D.textContent='00';H.textContent='00';M.textContent='00';S.textContent='00'; return; }
+      D.textContent = pad(Math.floor(diff / 86400000));
+      H.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+      M.textContent = pad(Math.floor((diff % 3600000) / 60000));
+      S.textContent = pad(Math.floor((diff % 60000) / 1000));
+    }
+    tick(); setInterval(tick, 1000);
+    if (TWEAK_DEFAULTS.showCountdown === false) {
+      document.getElementById('countdownSec').style.display = 'none';
+    }
+  })();
+
+  // ===== Reveal on scroll =====
+  (function() {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.05 });
+    els.forEach(e => io.observe(e));
+    setTimeout(() => els.forEach(e => e.classList.add('in')), 3000);
+  })();
+
+  // ===== Petals =====
+  (function() {
+    const host = document.getElementById('petals');
+    const N = 14;
+    for (let i = 0; i < N; i++) {
+      const p = document.createElement('div');
+      p.className = 'petal';
+      p.style.left = (Math.random() * 100) + '%';
+      p.style.animationDuration = (12 + Math.random() * 14) + 's';
+      p.style.animationDelay = (Math.random() * -20) + 's';
+      p.style.opacity = (0.3 + Math.random() * 0.5);
+      p.style.transform = `scale(${0.6 + Math.random() * 1})`;
+      host.appendChild(p);
+    }
+    if (TWEAK_DEFAULTS.petalsOn === false) host.style.display = 'none';
+  })();
+
+  // ===== Palette + toggles =====
+  (function() {
+    const body = document.body;
+    body.setAttribute('data-palette', TWEAK_DEFAULTS.palette || 'maroon');
+    const swatches = document.querySelectorAll('#swatchRow .swatch');
+    swatches.forEach(sw => {
+      sw.classList.toggle('active', sw.dataset.val === body.getAttribute('data-palette'));
+      sw.addEventListener('click', () => {
+        body.setAttribute('data-palette', sw.dataset.val);
+        swatches.forEach(s => s.classList.toggle('active', s === sw));
+        window._postEdits({ palette: sw.dataset.val });
+      });
+    });
+    function bindToggle(id, key, effect, initial) {
+      const el = document.getElementById(id);
+      if (initial === false) el.classList.remove('on');
+      el.addEventListener('click', () => {
+        el.classList.toggle('on');
+        effect(el.classList.contains('on'));
+        window._postEdits({ [key]: el.classList.contains('on') });
+      });
+    }
+    bindToggle('tgCountdown', 'showCountdown', on => document.getElementById('countdownSec').style.display = on ? '' : 'none', TWEAK_DEFAULTS.showCountdown);
+    bindToggle('tgEnv', 'envelopeIntro', on => { if (!on) document.getElementById('envWrap').style.display = 'none'; }, TWEAK_DEFAULTS.envelopeIntro);
+    bindToggle('tgPetals', 'petalsOn', on => document.getElementById('petals').style.display = on ? '' : 'none', TWEAK_DEFAULTS.petalsOn);
+
+    const panel = document.getElementById('tweaks');
+    window.addEventListener('message', (e) => {
+      const m = e.data || {};
+      if (m.type === '__activate_edit_mode') panel.classList.add('on');
+      if (m.type === '__deactivate_edit_mode') panel.classList.remove('on');
+    });
+    try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e){}
+  })();
+</script>
+
+</body>
+</html>
