@@ -1137,6 +1137,37 @@ footer::after{
   color:var(--gold-deep);
 }
 
+/* ───── CREDITS (subtle, below footer) ───── */
+.credits{
+  position:relative;z-index:3;
+  padding:18px 24px 28px;text-align:center;
+  background:linear-gradient(180deg,var(--ivory-warm) 0%,var(--ivory-deep) 100%);
+  border-top:1px solid rgba(196,146,63,.25);
+}
+.credits::before{
+  content:"❋";display:block;
+  font-size:9px;color:var(--gold);opacity:.7;
+  margin-bottom:8px;letter-spacing:.4em;
+}
+.credits-line{
+  font-family:var(--sans);font-size:9.5px;font-weight:300;
+  letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold-deep);opacity:.85;
+  line-height:1.6;
+}
+.credits-line .designer{
+  display:block;margin-top:3px;
+  font-family:var(--italiana);font-size:13px;
+  letter-spacing:.18em;text-transform:none;
+  color:var(--maroon-deep);opacity:1;
+}
+[data-lang="te"] .credits-line{
+  font-family:var(--tel-body);letter-spacing:.04em;text-transform:none;font-size:11px;
+}
+[data-lang="te"] .credits-line .designer{
+  font-family:var(--tel-display);font-size:15px;letter-spacing:.02em;
+}
+
 /* falling petals */
 .petals{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .petal{
@@ -1794,6 +1825,20 @@ footer::after{
         </div>
         <div class="f-hash">#VijayWedsPavithra · 09.05.2026</div>
       </footer>
+
+      <!-- ═══════ CREDITS ═══════ -->
+      <div class="credits reveal">
+        <div class="credits-line">
+          <span class="lang-en">
+            Designed &amp; Crafted by
+            <span class="designer">Samula Vijay Reddy</span>
+          </span>
+          <span class="lang-te">
+            రూపకల్పన &amp; నిర్మాణం
+            <span class="designer">సాముల విజయ్ రెడ్డి</span>
+          </span>
+        </div>
+      </div>
 
     </div>
   </div>
